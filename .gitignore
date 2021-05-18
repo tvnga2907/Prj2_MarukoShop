@@ -1,0 +1,9 @@
+Contact/__pycache__/*
+Contact/migrations/*
+Home/__pycache__/
+Home/migrations/__pycache__/*
+Login/__pycache__/*
+Login/migrations/__pycache__/*
+Prj2_MarukoShop/__pycache__/*
+Shop/__pycache__/*
+Shop/migrations/__pycache__/*

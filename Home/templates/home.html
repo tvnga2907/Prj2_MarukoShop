@@ -12,16 +12,16 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
     rel="stylesheet">
-
+    {% load static %}
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' type='text/css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' type='text/css' %}">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' type='text/css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' type='text/css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' type='text/css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' type='text/css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' type='text/css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' type='text/css' %}">
 </head>
 
 <body>
@@ -54,7 +54,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="header__logo">
-                        <a href="home.html"><img src="img/logo.jpg" style= "height : 100px;" width="100px;"  alt=""></a>
+                        <a href="home.html"><img src="{% static 'img/logo.png' %}"  style= "height : 100px;" width="100px;"  alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -62,15 +62,15 @@
                         <ul>
                             <li class="active"><a href="./home.html">Home</a></li>
                             <li><a href="./shop.html">Shop</a></li>
-                            <li><a href="./contact.html">Contacts</a></li>
+                            <li><a href="/contact">Contacts</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
-                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                        <a href="#"><img src="img/icon/heart.png" alt=""></a>
-                        <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+                        <a href="#" class="search-switch"><img src="{% static 'img/icon/search.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'img/icon/cart.png' %}" alt=""> <span>0</span></a>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
     <!-- Hero Section Begin -->
     <section class="hero">
         <div class="hero__slider owl-carousel">
-            <div class="hero__items set-bg" data-setbg="img/image8.jpeg">
+            <div class="hero__items set-bg" data-setbg="{% static 'img/image8.jpeg' %}">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-5 col-lg-7 col-md-8">
@@ -100,7 +100,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero__items set-bg" data-setbg="img/image1.png">
+            <div class="hero__items set-bg" data-setbg="{% static 'img/image1.png' %}">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-5 col-lg-7 col-md-8">
@@ -129,7 +129,7 @@
                 <div class="col-lg-7 offset-lg-4">
                     <div class="banner__item">
                         <div class="banner__item__pic">
-                            <img src="img/image2.jpg" style="height: 400px; width: 400px;"alt="">
+                            <img src="{% static 'img/image2.jpg' %}" style="height: 400px; width: 400px;"alt="">
                         </div>
                         <div class="banner__item__text">
                             <h2>Clothing Collections 2020</h2>
@@ -140,7 +140,7 @@
                 <div class="col-lg-5">
                     <div class="banner__item banner__item--middle">
                         <div class="banner__item__pic">
-                            <img src="img/image17.jpeg"  style="height: 400px; width: 180px;"alt="">
+                            <img src="{% static 'img/image17.jpeg' %}"  style="height: 400px; width: 180px;"alt="">
                         </div>
                         <div class="banner__item__text">
                             <h2>Accessories 2020</h2>
@@ -151,7 +151,7 @@
                 <div class="col-lg-7">
                     <div class="banner__item banner__item--last">
                         <div class="banner__item__pic">
-                            <img src="img/image18.jpg" style="height: 400px; width : 180px;" alt="">
+                            <img src="{% static 'img/image18.jpg' %}" style="height: 400px; width : 180px;" alt="">
                         </div>
                         <div class="banner__item__text">
                             <h2>Shoes Spring 2020</h2>
@@ -179,12 +179,12 @@
             <div class="row product__filter">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/image3.jpeg">
+                        <div class="product__item__pic set-bg" data-setbg="{% static 'img/image3.jpeg' %}">
                             <span class="label">New</span>
                             <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/compare.png' %}" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/search.png' %}" alt=""></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -214,11 +214,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/image10.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="{% static 'img/image10.jpg' %}">
                             <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/compare.png' %}" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/search.png' %}" alt=""></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -248,12 +248,12 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item sale">
-                        <div class="product__item__pic set-bg" data-setbg="img/image11.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="{% static 'img/image11.jpg' %}">
                             <span class="label">Sale</span>
                             <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/compare.png' %}" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/search.png' %}" alt=""></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -283,11 +283,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/image16.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="{% static 'img/image16.jpg' %}">
                             <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/compare.png' %}" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/search.png' %}" alt=""></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -317,11 +317,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/image15.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="{% static 'img/image15.jpg' %}">
                             <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/compare.png' %}" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/search.png' %}" alt=""></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -351,12 +351,12 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item sale">
-                        <div class="product__item__pic set-bg" data-setbg="img/image14.jpeg">
+                        <div class="product__item__pic set-bg" data-setbg="{% static 'img/image14.jpeg' %}">
                             <span class="label">Sale</span>
                             <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/compare.png' %}" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/search.png' %}" alt=""></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -386,11 +386,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/image13.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="{% static 'img/image13.jpg' %}">
                             <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/compare.png' %}" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/search.png' %}" alt=""></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -420,11 +420,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/image12.jpeg">
+                        <div class="product__item__pic set-bg" data-setbg="{% static 'img/image12.jpeg' %}">
                             <ul class="product__hover">
-                                <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
-                                <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
-                                <li><a href="#"><img src="img/icon/search.png" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/compare.png' %}" alt=""> <span>Compare</span></a></li>
+                                <li><a href="#"><img src="{% static 'img/icon/search.png' %}" alt=""></a></li>
                             </ul>
                         </div>
                         <div class="product__item__text">
@@ -468,7 +468,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="categories__hot__deal">
-                        <img src="img/image10.jpg" alt="">
+                        <img src="{% static 'image10.jpg' %}" alt="">
                         <div class="hot__deal__sticker">
                             <span>Sale Of</span>
                             <h5>$29.99</h5>
@@ -520,10 +520,10 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="home.html"><img src="img/logo.jpg" style="height: 100px; width: 100px;" alt=""></a>
+                            <a href="home.html"><img src="{% static 'img/logo.jpg' %}" style="height: 100px; width: 100px;" alt=""></a>
                         </div>
                         <p>Khách hàng luôn là trái tim, linh hồn và là cảm hứng của mỗi sản phẩm.</p>
-                        <a href="#"><img src="img/payment.png" alt=""></a>
+                        <a href="#"><img src="{% static 'img/payment.png' %}" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-2 offset-lg-1 col-md-2 col-sm-6">
@@ -581,16 +581,17 @@
     <!-- Search End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- {% load static %} -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nicescroll.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/mixitup.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>
