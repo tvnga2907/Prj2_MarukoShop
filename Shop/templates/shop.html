@@ -73,7 +73,20 @@
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
-                                <a href="/login">Đăng nhập/ Đăng ký</a>
+                                <!-- <a href="/login">Đăng nhập/ Đăng ký</a> -->
+                                {% if user.is_authenticated %}
+                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/logout">Welcome, {{user.username}} Logout</a>
+                                    </li>
+
+                                    {% else %}
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/login">Login/Sign up</a>
+                                    </li>
+
+                                {% endif %}
                                 
                             </div>
                             
