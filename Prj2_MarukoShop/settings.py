@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Home',
     'Contact',
-    'Login',
-    'Shop'
+    'Shop',
+    'user'
 ]
 
 MIDDLEWARE = [
@@ -78,15 +79,10 @@ WSGI_APPLICATION = 'Prj2_MarukoShop.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
- 'default': {
- 'ENGINE': 'django.db.backends.mysql',
- 'NAME': 'Maruko',
- 'USER':'root',
- 'PASSWORD':'root2907',
- 'HOST':'localhost',
- 'PORT': '3306',
- 'OPTIONS': {'charset': 'utf8mb4'}
- }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -106,6 +102,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-secondary',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+ }
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
